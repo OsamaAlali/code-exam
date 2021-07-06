@@ -10,9 +10,15 @@ Hint: You can use the array function reverse
 ------------------------------------------------------------------------------------------------ */
 
 const reverseString = (str) => {
-    // Solution code here...
-
+    
+    let m =str.split('').reduce((a,value)=>{
+        return a=  value + a 
+    })
+ return m;
 };
+//   console.log(reverseString('asdfg')
+//   )
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -30,9 +36,15 @@ Output: ['a','b','c','d','e','f']
 ------------------------------------------------------------------------------------------------ */
 
 const addInTheMiddle = (arr, val) => {
-    // Solution code here...
+   const length= Math.ceil(arr.length/2) 
+   console.log('length',length)
+   arr.splice(length,0,val)
+   console.log('inside Fun',arr);
+   return arr;
 };
+console.log(addInTheMiddle([1,2,4,5],3));
 
+console.log(addInTheMiddle(['a','b','c','e','f'],'d'));
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
